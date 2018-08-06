@@ -50,10 +50,8 @@ class Stack:
 
     def reverse(self):
         result = Stack()
-        p = self.head
-        while p is not None:
-            result.push(p.value)
-            p = p.next
+        while self.head:
+            result.push(self.pop())
         return result
 
 
