@@ -12,9 +12,6 @@ def a_star(start, goal):
 		if curr == goal:
 			return contruct_path(meta, curr)
 
-		open_set.remove(curr)
-		closed_set.add(curr)
-
 		for n in curr.get_adjacent():
 			if neighbor in closed_set:
 				continue
@@ -30,6 +27,11 @@ def a_star(start, goal):
 			meta[neighbor] = curr
 			g_score[neighbor] = score
 			f_score[neighbor] = g_score[neighbor] + heuristic(neighbor, goal)
+
+		open_set.remove(curr)
+		closed_set.add(curr)
+
+	return []
 
 
 def contruct_path(meta, curr):
