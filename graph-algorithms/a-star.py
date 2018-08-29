@@ -28,7 +28,6 @@ def a_star(start, goal):
 			g_score[neighbor] = score
 			f_score[neighbor] = g_score[neighbor] + heuristic(neighbor, goal)
 
-		open_set.remove(curr)
 		closed_set.add(curr)
 
 	return []
