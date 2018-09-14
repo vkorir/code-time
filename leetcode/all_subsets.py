@@ -21,7 +21,6 @@ def find_subsets(arr, index, subset, res):
         res.append(subset[:])
         find_subsets(arr, i + 1, subset, res)
         subset.pop()
-    return
 
 if __name__ == '__main__':
     unittest.main()
