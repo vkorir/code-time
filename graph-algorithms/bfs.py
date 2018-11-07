@@ -33,3 +33,11 @@ def contrusct_path(node, meta):
 
 	path.reverse()
 	return path
+
+def default_contruct(node, parents):
+	# parents[src] = None
+	path = []
+	while node:
+		path.insert(0, node)
+		node = parents[node]
+	return path
