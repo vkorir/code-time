@@ -1,7 +1,7 @@
 def validate_bst(root):
-	stack = [(root,-float('inf'), float('inf'))]
+	stack = [(root, -float('inf'), float('inf'))]
 	while len(stack) > 0:
-		node, mx, mn = stack.pop()
+		node, mn, mx = stack.pop()
 		if not node:
 			continue
 		if node.val <= mn or node.val >= mx:

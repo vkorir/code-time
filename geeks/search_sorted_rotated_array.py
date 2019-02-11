@@ -18,7 +18,7 @@ def find_pivot(array, lo, hi):
 	if mid < hi and array[mid] > array[mid + 1]:
 		return mid
 	if mid > lo and array[mid] < array[mid - 1]:
-		return mie - 1
+		return mid - 1
 	if array[lo] >= array[mid]:
 		return find_pivot(array, lo, mid - 1)
 	return find_pivot(array, mid + 1, hi)
